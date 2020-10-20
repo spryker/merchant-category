@@ -18,9 +18,9 @@ interface MerchantCategoryFacadeInterface
      *
      * @api
      *
-     * @param \Generated\Shared\Transfer\MerchantCategoryCriteriaTransfer $merchantCriteriaTransfer
+     * @param \Generated\Shared\Transfer\MerchantCategoryCriteriaTransfer $merchantCategoryCriteriaTransfer
      *
      * @return \Generated\Shared\Transfer\MerchantCategoryTransfer
      */
-    public function get(MerchantCategoryCriteriaTransfer $merchantCriteriaTransfer): MerchantCategoryTransfer;
+    public function get(MerchantCategoryCriteriaTransfer $merchantCategoryCriteriaTransfer): MerchantCategoryTransfer;
 }
