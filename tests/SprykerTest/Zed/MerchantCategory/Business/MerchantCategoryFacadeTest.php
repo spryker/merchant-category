@@ -31,9 +31,6 @@ class MerchantCategoryFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -41,9 +38,6 @@ class MerchantCategoryFacadeTest extends Unit
         $this->tester->cleanUpDatabase();
     }
 
-    /**
-     * @return void
-     */
     public function testGetReturnsListOfMerchantCategoriesByMerchantId(): void
     {
         // Arrange
@@ -60,9 +54,6 @@ class MerchantCategoryFacadeTest extends Unit
         $this->assertCount(1, $merchantCategoryResponseTransfer->getMerchantCategories());
     }
 
-    /**
-     * @return void
-     */
     public function testGetReturnsNothingForNotExistingCategory(): void
     {
         // Arrange
@@ -79,9 +70,6 @@ class MerchantCategoryFacadeTest extends Unit
         $this->assertEmpty($merchantCategoryResponseTransfer->getMerchantCategories());
     }
 
-    /**
-     * @return void
-     */
     public function testGetReturnsNothingForNoMerchantId(): void
     {
         // Arrange
@@ -95,9 +83,6 @@ class MerchantCategoryFacadeTest extends Unit
         $this->assertCount(1, $merchantCategoryResponseTransfer->getMerchantCategories());
     }
 
-    /**
-     * @return void
-     */
     public function testExpandMerchantCollectionWithCategoriesReturnsMerchantCollectionWithRelatedCategoriesIfExist(): void
     {
         // Arrange
@@ -141,9 +126,6 @@ class MerchantCategoryFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testExpandMerchantCollectionWithCategoriesReturnsEmptyMerchantCollectionIfEmptyMerchantCollectionWasPassed(): void
     {
         // Arrange
@@ -157,9 +139,6 @@ class MerchantCategoryFacadeTest extends Unit
         $this->assertCount(0, $resultMerchantCollectionTransfer->getMerchants());
     }
 
-    /**
-     * @return void
-     */
     public function testExpandMerchantCollectionWithCategoriesThrowsExceptionIfMerchantCollectionMerchantHasNoIdMerchant(): void
     {
         // Arrange

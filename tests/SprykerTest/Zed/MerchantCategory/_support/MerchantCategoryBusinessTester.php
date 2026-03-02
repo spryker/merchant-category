@@ -34,27 +34,16 @@ class MerchantCategoryBusinessTester extends Actor
 {
     use _generated\MerchantCategoryBusinessTesterActions;
 
-    /**
-     * @return void
-     */
     public function cleanUpDatabase(): void
     {
         $this->cleanUpMerchantCategoryTable();
     }
 
-    /**
-     * @return void
-     */
     protected function cleanUpMerchantCategoryTable(): void
     {
         SpyMerchantCategoryQuery::create()->deleteAll();
     }
 
-    /**
-     * @param int $categoriesCount
-     *
-     * @return \Generated\Shared\Transfer\MerchantTransfer
-     */
     public function haveMerchantWithCategories(int $categoriesCount = 1): MerchantTransfer
     {
         $merchantTransfer = $this->haveMerchant();
@@ -71,12 +60,6 @@ class MerchantCategoryBusinessTester extends Actor
         return $merchantTransfer;
     }
 
-    /**
-     * @param int $expectedCategoriesCount
-     * @param \Generated\Shared\Transfer\MerchantTransfer $actualMerchantTransfer
-     *
-     * @return void
-     */
     public function assertMerchantHasCategoriesCount(int $expectedCategoriesCount, MerchantTransfer $actualMerchantTransfer): void
     {
         $categories = $actualMerchantTransfer->getCategories()->getArrayCopy();

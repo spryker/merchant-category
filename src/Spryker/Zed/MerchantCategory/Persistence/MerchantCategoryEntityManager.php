@@ -16,11 +16,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
  */
 class MerchantCategoryEntityManager extends AbstractEntityManager implements MerchantCategoryEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantCategoryCriteriaTransfer $merchantCategoryCriteriaTransfer
-     *
-     * @return void
-     */
     public function delete(MerchantCategoryCriteriaTransfer $merchantCategoryCriteriaTransfer): void
     {
         $merchantCategoryQuery = $this->getFactory()->getMerchantCategoryPropelQuery();

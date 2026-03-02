@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\MerchantCategoryCriteriaTransfer;
 
 interface MerchantCategoryDeleterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantCategoryCriteriaTransfer $merchantCategoryCriteriaTransfer
-     *
-     * @return void
-     */
     public function delete(MerchantCategoryCriteriaTransfer $merchantCategoryCriteriaTransfer): void;
 }

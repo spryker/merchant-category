@@ -20,11 +20,6 @@ class MerchantCategoryHelper extends Module
 {
     use DataCleanupHelperTrait;
 
-    /**
-     * @param array $seedData
-     *
-     * @return \Generated\Shared\Transfer\MerchantCategoryTransfer
-     */
     public function haveMerchantCategory(array $seedData = []): MerchantCategoryTransfer
     {
         if (!isset($seedData[MerchantCategoryTransfer::FK_CATEGORY])) {
@@ -42,11 +37,6 @@ class MerchantCategoryHelper extends Module
         return $this->createMerchantCategory($seedData);
     }
 
-    /**
-     * @param array $seedData
-     *
-     * @return \Generated\Shared\Transfer\MerchantCategoryTransfer
-     */
     protected function createMerchantCategory(array $seedData): MerchantCategoryTransfer
     {
         /** @var \Generated\Shared\Transfer\MerchantCategoryTransfer $merchantCategoryTransfer */
@@ -68,9 +58,6 @@ class MerchantCategoryHelper extends Module
         return $merchantCategoryTransfer;
     }
 
-    /**
-     * @return \SprykerTest\Zed\Merchant\Helper\MerchantHelper
-     */
     protected function getMerchantHelper(): MerchantHelper
     {
         /** @var \SprykerTest\Zed\Merchant\Helper\MerchantHelper $merchantHelper */
@@ -79,9 +66,6 @@ class MerchantCategoryHelper extends Module
         return $merchantHelper;
     }
 
-    /**
-     * @return \SprykerTest\Zed\Category\Helper\CategoryHelper
-     */
     protected function getCategoryHelper(): CategoryHelper
     {
         /** @var \SprykerTest\Zed\Category\Helper\CategoryHelper $categoryHelper */
@@ -90,9 +74,6 @@ class MerchantCategoryHelper extends Module
         return $categoryHelper;
     }
 
-    /**
-     * @return \Orm\Zed\MerchantCategory\Persistence\SpyMerchantCategoryQuery
-     */
     protected function getMerchantCategoryPropelQuery(): SpyMerchantCategoryQuery
     {
         return SpyMerchantCategoryQuery::create();

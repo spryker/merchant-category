@@ -17,20 +17,12 @@ class MerchantCategoryDeleter implements MerchantCategoryDeleterInterface
      */
     protected $entityManager;
 
-    /**
-     * @param \Spryker\Zed\MerchantCategory\Persistence\MerchantCategoryEntityManagerInterface $entityManager
-     */
     public function __construct(
         MerchantCategoryEntityManagerInterface $entityManager
     ) {
         $this->entityManager = $entityManager;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantCategoryCriteriaTransfer $merchantCategoryCriteriaTransfer
-     *
-     * @return void
-     */
     public function delete(MerchantCategoryCriteriaTransfer $merchantCategoryCriteriaTransfer): void
     {
         $merchantCategoryCriteriaTransfer->requireCategoryIds();

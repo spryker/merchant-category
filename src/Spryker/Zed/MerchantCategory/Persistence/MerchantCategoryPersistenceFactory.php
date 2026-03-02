@@ -26,9 +26,6 @@ class MerchantCategoryPersistenceFactory extends AbstractPersistenceFactory
         return SpyMerchantCategoryQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantCategory\Persistence\Propel\Mapper\MerchantCategoryMapper
-     */
     public function createMerchantCategoryMapper(): MerchantCategoryMapper
     {
         return new MerchantCategoryMapper();

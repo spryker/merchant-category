@@ -27,9 +27,6 @@ use Spryker\Zed\MerchantCategory\MerchantCategoryDependencyProvider;
  */
 class MerchantCategoryBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\MerchantCategory\Business\Reader\MerchantCategoryReaderInterface
-     */
     public function createMerchantCategoryReader(): MerchantCategoryReaderInterface
     {
         return new MerchantCategoryReader(
@@ -37,9 +34,6 @@ class MerchantCategoryBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantCategory\Business\Publisher\MerchantCategoryPublisherInterface
-     */
     public function createMerchantCategoryPublisher(): MerchantCategoryPublisherInterface
     {
         return new MerchantCategoryPublisher(
@@ -49,17 +43,11 @@ class MerchantCategoryBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantCategory\Business\Deleter\MerchantCategoryDeleterInterface
-     */
     public function createMerchantCategoryDeleter(): MerchantCategoryDeleterInterface
     {
         return new MerchantCategoryDeleter($this->getEntityManager());
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantCategory\Business\Expander\MerchantCategoryMerchantExpanderInterface
-     */
     public function createMerchantCategoryMerchantExpander(): MerchantCategoryMerchantExpanderInterface
     {
         return new MerchantCategoryMerchantExpander(
@@ -67,17 +55,11 @@ class MerchantCategoryBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantCategory\Dependency\Facade\MerchantCategoryToEventFacadeInterface
-     */
     public function getFacadeEvent(): MerchantCategoryToEventFacadeInterface
     {
         return $this->getProvidedDependency(MerchantCategoryDependencyProvider::FACADE_EVENT);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantCategory\Dependency\Facade\MerchantCategoryToEventBehaviorFacadeInterface
-     */
     public function getFacadeEventBehavior(): MerchantCategoryToEventBehaviorFacadeInterface
     {
         return $this->getProvidedDependency(MerchantCategoryDependencyProvider::FACADE_EVENT_BEHAVIOR);

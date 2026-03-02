@@ -17,12 +17,6 @@ use Orm\Zed\MerchantCategory\Persistence\SpyMerchantCategory;
 
 class MerchantCategoryMapper
 {
-    /**
-     * @param \Orm\Zed\MerchantCategory\Persistence\SpyMerchantCategory $merchantCategoryEntity
-     * @param \Generated\Shared\Transfer\MerchantCategoryTransfer $merchantCategoryTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantCategoryTransfer
-     */
     public function mapMerchantCategoryEntityToMerchantCategoryTransfer(
         SpyMerchantCategory $merchantCategoryEntity,
         MerchantCategoryTransfer $merchantCategoryTransfer
@@ -35,12 +29,6 @@ class MerchantCategoryMapper
         return $merchantCategoryTransfer;
     }
 
-    /**
-     * @param \Orm\Zed\Category\Persistence\SpyCategory $categoryEntity
-     * @param \Generated\Shared\Transfer\CategoryTransfer $categoryTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryTransfer
-     */
     protected function mapCategoryEntityToCategoryTransfer(
         SpyCategory $categoryEntity,
         CategoryTransfer $categoryTransfer

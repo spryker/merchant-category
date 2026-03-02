@@ -19,19 +19,11 @@ class MerchantCategoryReader implements MerchantCategoryReaderInterface
      */
     protected $merchantCategoryRepository;
 
-    /**
-     * @param \Spryker\Zed\MerchantCategory\Persistence\MerchantCategoryRepositoryInterface $merchantCategoryRepository
-     */
     public function __construct(MerchantCategoryRepositoryInterface $merchantCategoryRepository)
     {
         $this->merchantCategoryRepository = $merchantCategoryRepository;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantCategoryCriteriaTransfer $merchantCategoryCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantCategoryResponseTransfer
-     */
     public function get(MerchantCategoryCriteriaTransfer $merchantCategoryCriteriaTransfer): MerchantCategoryResponseTransfer
     {
         $merchantCategoryTransfers = $this->merchantCategoryRepository->get($merchantCategoryCriteriaTransfer);

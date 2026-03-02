@@ -19,20 +19,12 @@ class MerchantCategoryMerchantExpander implements MerchantCategoryMerchantExpand
      */
     protected MerchantCategoryRepositoryInterface $merchantCategoryRepository;
 
-    /**
-     * @param \Spryker\Zed\MerchantCategory\Persistence\MerchantCategoryRepositoryInterface $merchantCategoryRepository
-     */
     public function __construct(
         MerchantCategoryRepositoryInterface $merchantCategoryRepository
     ) {
         $this->merchantCategoryRepository = $merchantCategoryRepository;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantCollectionTransfer $merchantCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantCollectionTransfer
-     */
     public function expand(MerchantCollectionTransfer $merchantCollectionTransfer): MerchantCollectionTransfer
     {
         if ($merchantCollectionTransfer->getMerchants()->count() === 0) {
@@ -64,11 +56,6 @@ class MerchantCategoryMerchantExpander implements MerchantCategoryMerchantExpand
         return $merchantCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantCollectionTransfer $merchantCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantCategoryCriteriaTransfer
-     */
     protected function createMerchantCategoryCriteria(
         MerchantCollectionTransfer $merchantCollectionTransfer
     ): MerchantCategoryCriteriaTransfer {

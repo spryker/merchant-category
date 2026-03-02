@@ -27,9 +27,6 @@ use Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant\MerchantCategoryM
  */
 class MerchantCategoryMerchantExpanderPluginTest extends Unit
 {
-    /**
-     * @return void
-     */
     public function testExpandExpandsMerchantDataWithCategories(): void
     {
         // Arrange
@@ -75,11 +72,6 @@ class MerchantCategoryMerchantExpanderPluginTest extends Unit
         $this->assertEmpty($merchantTransfer->getCategories());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantCategoryResponseTransfer $merchantCategoryResponseTransfer
-     *
-     * @return \Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant\MerchantCategoryMerchantExpanderPlugin
-     */
     protected function createMerchantCategoryMerchantExpanderPluginMock(
         MerchantCategoryResponseTransfer $merchantCategoryResponseTransfer
     ): MerchantCategoryMerchantExpanderPlugin {

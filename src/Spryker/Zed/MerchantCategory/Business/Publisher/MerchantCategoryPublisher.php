@@ -32,11 +32,6 @@ class MerchantCategoryPublisher implements MerchantCategoryPublisherInterface
      */
     protected $merchantCategoryRepository;
 
-    /**
-     * @param \Spryker\Zed\MerchantCategory\Dependency\Facade\MerchantCategoryToEventFacadeInterface $eventFacade
-     * @param \Spryker\Zed\MerchantCategory\Dependency\Facade\MerchantCategoryToEventBehaviorFacadeInterface $eventBehaviorFacade
-     * @param \Spryker\Zed\MerchantCategory\Persistence\MerchantCategoryRepositoryInterface $merchantCategoryRepository
-     */
     public function __construct(
         MerchantCategoryToEventFacadeInterface $eventFacade,
         MerchantCategoryToEventBehaviorFacadeInterface $eventBehaviorFacade,
