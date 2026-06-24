@@ -17,6 +17,8 @@ use Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface;
 class CategoryWritePublisherPlugin extends AbstractPlugin implements PublisherPluginInterface
 {
     /**
+     * @api
+     *
      * @uses \Spryker\Zed\Category\Dependency\CategoryEvents::CATEGORY_AFTER_PUBLISH_UPDATE
      *
      * @var string
